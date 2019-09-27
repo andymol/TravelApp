@@ -40,6 +40,11 @@ class TripComponent extends React.Component {
             token,
             userId
         } = this.props;
+<<<<<<< HEAD
+=======
+        // const { isLoggedIn, token, userId } = this.props.history.location.state;
+        // console.log("trip: " + trip);
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
 
 
         const coverPhotos = trip.gallery.filter(g => g.isCoverPhoto);

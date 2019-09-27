@@ -25,11 +25,21 @@ export default class TripApi {
     }
 
     delTripData(locationState,trip) {
+<<<<<<< HEAD
+=======
+        console.log('locationstate', locationState);
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
         let url = `${AppConfig.API_URL_REL}/${trip.id}`;
 
         return fetch(url, {
             method: 'DELETE',
+<<<<<<< HEAD
             headers: {
+=======
+            // mode: "no-cors",
+            headers: {
+                // Accept: 'application/json',
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + locationState.token
             }
@@ -41,6 +51,7 @@ export default class TripApi {
             }
         });
     }
+<<<<<<< HEAD
 
 
     repTripData(locationState, trip) {
@@ -50,6 +61,16 @@ export default class TripApi {
         const options = {
             method: 'post',
             headers: {
+=======
+    repTripData(locationState, trip) {
+        const { isLoggedIn, token, userId } = locationState;
+        let url = `${AppConfig.API_URL_REL}/${trip.id}`;
+
+        return fetch(url, {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + locationState.token
             },
@@ -59,6 +80,7 @@ export default class TripApi {
                 token: token,
                 trip: trip
               })
+<<<<<<< HEAD
           }
           
           return fetch(url, options).catch(err => {
@@ -71,6 +93,19 @@ export default class TripApi {
         const isChecked = e.target.checked;
         var check;
         debugger;
+=======
+        }).then(res => {
+            if (res.ok === true) {
+                return res.json();
+            } else {
+                return Promise.resolve([]);
+            }
+        });
+    }
+    handleChange(e, locationState, trip){
+        const isChecked = e.target.checked;
+        var check;
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
         if(isChecked){
             check = "true";
         } else{
@@ -82,6 +117,10 @@ export default class TripApi {
         return fetch(url, {
             method: 'PUT',
             headers: {
+<<<<<<< HEAD
+=======
+                Accept: 'application/json',
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
                 'Content-Type': 'application/json',
                 Authorization: 'Bearer ' + locationState.token
             },

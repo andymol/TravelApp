@@ -154,6 +154,10 @@ export class AddTripForm extends React.Component {
   }
 
   onSubmit = (values) => {
+<<<<<<< HEAD
+=======
+    debugger;
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
     console.log("onSubmit");
     this.AddTripSubmit(values);
   };
@@ -292,16 +296,27 @@ export class AddTripForm extends React.Component {
 
     return (
       <Formik
+<<<<<<< HEAD
         enableReinitialize={true}
         initialValues={initialValues}
         validationSchema={getSchema}
         onSubmit= {() =>{console.log("submit");}}// {this.onSubmit}
+=======
+        // enableReinitialize={true}
+        initialValues={initialValues}
+        validationSchema={getSchema}
+        onSubmit= {this.onSubmit}// 
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
         render={() => {
           return (
             <Form mode="structured" className="form">
               <fieldset>
                 <h1>Add a new tour</h1>
+<<<<<<< HEAD
                 <div className="form__title form__title--sm">General Info</div>
+=======
+                {/* <div className="form__title form__title--sm">General Info</div>
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
                 <div className="form__container">
                   <div className="col">
                     <div>
@@ -421,7 +436,11 @@ export class AddTripForm extends React.Component {
                           className="form__input"
                         />
 
+<<<<<<< HEAD
                         {/* <Select
+=======
+                        { <Select
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
                           name="currency"
                           placeholder="Currency*"
                           options={[
@@ -430,7 +449,11 @@ export class AddTripForm extends React.Component {
                             { value: 'GBP', label: 'GBP' }
                           ]}
                           className="form__select"
+<<<<<<< HEAD
                         /> */}
+=======
+                        /> }
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
                       </div>
                     </div>
                     
@@ -445,12 +468,20 @@ export class AddTripForm extends React.Component {
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 {/* <p>Check all that is included in this price:</p>
+=======
+                <p>Check all that is included in this price:</p>
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
                 <div className="form__checkbox-container">
                   {checkBoxesAmenities.map((cb) => (
                     <Checkbox key={cb.name} name={cb.name} text={cb.text} />
                   ))}
+<<<<<<< HEAD
                 </div> */}
+=======
+                </div>
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
 
                 <ItinerariesList
                   days={itineraryDays}
@@ -468,7 +499,11 @@ export class AddTripForm extends React.Component {
 
                 <div className="form__title form__title--sm">Gallery:</div>
 
+<<<<<<< HEAD
                 {/* <p>Check an image to use for your cover photo:</p>
+=======
+                <p>Check an image to use for your cover photo:</p>
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
                 <div className="form__fields-wrapper">
                   {this.state.checkBoxesImages.map((cb) => (
                     <ImageSelect
@@ -479,6 +514,7 @@ export class AddTripForm extends React.Component {
                       removePhoto={this.handleRemovePhoto}
                     />
                   ))}
+<<<<<<< HEAD
                 </div> */}
 
                 <div style={{ marginBottom: '1em' }}>
@@ -487,6 +523,16 @@ export class AddTripForm extends React.Component {
                   </button>
                 </div>
                 <SubmitBtn className="form__submit-btn" />
+=======
+                </div>
+
+                <div style={{ marginBottom: '1em' }}>}
+                  <button onClick={this.handleAddPhoto} className="add-btn">
+                    Add more photo
+                  </button>
+                  </div> */}
+                <SubmitBtn className="form__submit-btn" children="Get started"/>
+>>>>>>> 2170ade52d0d82bd6dd6de78ef2a361c638aafd0
               </fieldset>
             </Form>
           );
